@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="/actualizar_cliente" method="POST">
+         <input type ="hiden" name="txtid" value="{{dato[0]}}">   
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="txtnombre" value="{{dato[1]}}"><br>
+        <label for="nit">NIT</label>
+        <input type="text" name="txtnit" id="txtnit" value="{{dato[1]}}"><br>
+        <input type="submit" value="ACTUALIZAR">
+     </form> 
+ </body>
+ </html>
