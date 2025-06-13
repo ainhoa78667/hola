@@ -182,9 +182,24 @@ def generar_pdf(id):
     response.headers['Content-Disposition'] = 'inline; filename=reporte_compras.pdf'
     return response
 
+@app.route('/usuario')
+def usuarios():
+    return render_template('usuario.html')
 
-
-
+@app.route('/crear_usuario', methods=['POST'])
+def crear_usuario():
+    usuario = request.form['usuario']
+    clave = request.form['clave']
+    repetir_clave = request.form['repetir_clave']
+    rol = request.form['rol']
+    if clave==repetir_clave:
+        cursor=conexion.cursor()
+        sql="INSERT INTO tbusuario (user,clave,rol) VALUES(%s,%s,%s)"
+        cursor.execute(sql,(usuario,repetir_clave,rol))
+        conexion.commit()
+        cursor.close()
+    # Aquí procesas y guardas los datos
+    return render_template('/logout')
 
 if __name__ == '__main__':
     app.run(debug=True)

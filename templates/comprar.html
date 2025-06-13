@@ -9,8 +9,8 @@
 <body>
     <form method="post" action="/comprar">
         <input type="hidden" name="txtid" value="{{id}}">
-        <p>Nombre del cliente: {{datos[1]}}</p>
-        <p>NIT del cliente: {{datos[2]}}</p>
+        <p>Nombre del cliente: {{datos[1][1]}}</p>
+        <p>NIT del cliente: {{datos[2][2]}}</p>
         <label for="Producto">Producto</label>
         <select name="txtproducto" required>
             <option value="pepsi">PEPSI</option>

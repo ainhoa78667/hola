@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registrar Nuevo Usuario</h2>
+        <form method="POST" action="/crear_usuario">
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            <div>
+                <label for="clave">Clave:</label>
+                <input type="password" id="clave" name="clave" required>
+            </div>
+            <div>
+                <label for="repetir_clave">Repetir Clave:</label>
+                <input type="password" id="repetir_clave" name="repetir_clave" required>
+            </div>
+            <div>
+                <label for="rol">Rol:</label>
+                <select id="rol" name="rol" required>
+                    <option value="root">Root</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Insertar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
